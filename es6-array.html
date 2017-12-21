@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" contect="miles">
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="es6,数组方法详解,es6数组">
+    <title>es6 数组方法详解</title>
+</head>
+<body>
+<script>
+    let fruits = ['apple', 'banana', 'orange'];
+    let people = [
+        {
+            "name" : "kobe" ,
+            "age"  : 36
+        },
+        {
+            "name" : "jordan" ,
+                "age"  : 40
+        },
+        {
+            "name" : "james" ,
+                "age"  : 34
+        }
+    ];
+
+     var arr1 = fruits.map(item=>(
+             item.toUpperCase()
+     ));
+    console.log(arr1);
+    let arr2 = people.map(item=>(
+        item.age
+    ));
+     console.log(arr2); // logs A,B,C
+    var arr3 = people.map(item=>({
+        age : item.age
+    }));
+    console.log(arr3);
+    let arr4= people.filter(item=>(
+            item.age>36
+    ));
+    console.log(arr4); // [{age:40,name:"jordan"}]
+</script>
+</body>
+</html>
